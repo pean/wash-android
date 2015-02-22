@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wash</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="pref_wash_title">Wash API Settings</string>
+    <string name="pref_wash_api_url">API URL</string>
+    <string name="pref_wash_api_token">API Token</string>
+    <string name="title_activity_settings">Settings</string>
+</resources>

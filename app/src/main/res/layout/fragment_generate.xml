@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity$PlaceholderFragment"
+    android:focusable="false"
+    android:focusableInTouchMode="false">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Generate Short URL"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Long URL:"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/activity_horizontal_margin" />
+
+    <!-- TODO: Auto-complete history thingy -->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/FieldURL"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textIsSelectable="false"
+        android:editable="true"
+        android:hint="Paste URL Here..."
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:enabled="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate short URL"
+        android:id="@+id/button"
+        android:layout_below="@+id/FieldURL"
+        android:layout_alignEnd="@+id/FieldURL"
+        android:onClick="generateURL"/>
+    <!-- TODO: Make this more pretty and do not allow text to run under button -->
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/clearFieldURLButton"
+        android:src="@drawable/ic_action_backspace"
+        android:background="@null"
+        android:gravity="right|center_vertical"
+        android:layout_alignRight="@+id/FieldURL"
+        android:layout_above="@+id/button"
+        android:onClick="clearEditText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Short URL:"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/button"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/short_url"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:inputType="textMultiLine"
+        android:textIsSelectable="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Copy URL to Clipboard"
+        android:id="@+id/button2"
+        android:layout_below="@+id/short_url"
+        android:layout_alignParentEnd="true"
+        android:onClick="copyURL"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paste from Clipboard"
+        android:id="@+id/button4"
+        android:layout_above="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:onClick="pasteURL"/>
+
+</RelativeLayout>
